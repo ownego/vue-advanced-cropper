@@ -2417,6 +2417,7 @@ var VueAdvancedCropper = (function (t, e) {
 				'div',
 				{ class: r.classes.stencil, style: r.style },
 				[
+					e.renderSlot(t.$slots, 'default'),
 					e.createVNode(
 						c,
 						{
@@ -2624,6 +2625,7 @@ var VueAdvancedCropper = (function (t, e) {
 				'div',
 				{ class: r.classes.stencil, style: r.style },
 				[
+					e.renderSlot(t.$slots, 'default'),
 					e.createVNode(
 						c,
 						{
@@ -4401,7 +4403,12 @@ var VueAdvancedCropper = (function (t, e) {
 																onMoveEnd: r.onMoveEnd,
 															},
 														),
-														null,
+														{
+															default: e.withCtx(function () {
+																return [e.renderSlot(t.$slots, 'stencil-content')];
+															}),
+															_: 3,
+														},
 														16,
 														[
 															'image',

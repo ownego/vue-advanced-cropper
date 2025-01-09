@@ -2382,6 +2382,7 @@ Zt.render = function (e, i, n, o, s, r) {
 			'div',
 			{ class: r.classes.stencil, style: r.style },
 			[
+				t.renderSlot(e.$slots, 'default'),
 				t.createVNode(
 					c,
 					{
@@ -2582,6 +2583,7 @@ Gt.render = function (e, i, n, o, s, r) {
 			'div',
 			{ class: r.classes.stencil, style: r.style },
 			[
+				t.renderSlot(e.$slots, 'default'),
 				t.createVNode(
 					c,
 					{
@@ -4310,7 +4312,12 @@ var Qt = ['transitions'],
 														onMoveEnd: r.onMoveEnd,
 													},
 												),
-												null,
+												{
+													default: t.withCtx(function () {
+														return [t.renderSlot(e.$slots, 'stencil-content')];
+													}),
+													_: 3,
+												},
 												16,
 												[
 													'image',

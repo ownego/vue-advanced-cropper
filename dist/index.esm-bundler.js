@@ -2385,53 +2385,54 @@ var re = A('vue-rectangle-stencil'),
 		},
 		emits: ['resize', 'resize-end', 'move', 'move-end'],
 	};
-ae.render = function (i, r, a, h, c, l) {
-	var u = n('stencil-preview'),
-		d = n('draggable-area'),
-		m = n('bounding-box');
+ae.render = function (r, a, h, c, l, u) {
+	var d = n('stencil-preview'),
+		m = n('draggable-area'),
+		p = n('bounding-box');
 	return (
 		t(),
 		e(
 			'div',
-			{ class: l.classes.stencil, style: l.style },
+			{ class: u.classes.stencil, style: u.style },
 			[
+				i(r.$slots, 'default'),
 				s(
-					m,
+					p,
 					{
-						width: a.stencilCoordinates.width,
-						height: a.stencilCoordinates.height,
-						transitions: a.transitions,
-						class: l.classes.boundingBox,
-						handlers: a.handlers,
-						'handlers-component': a.handlersComponent,
-						'handlers-classes': a.handlersClasses,
-						'handlers-wrappers-classes': a.handlersWrappersClasses,
-						lines: a.lines,
-						'lines-component': a.linesComponent,
-						'lines-classes': a.linesClasses,
-						'lines-wrappers-classes': a.linesWrappersClasses,
-						resizable: a.resizable,
-						onResize: l.onResize,
-						onResizeEnd: l.onResizeEnd,
+						width: h.stencilCoordinates.width,
+						height: h.stencilCoordinates.height,
+						transitions: h.transitions,
+						class: u.classes.boundingBox,
+						handlers: h.handlers,
+						'handlers-component': h.handlersComponent,
+						'handlers-classes': h.handlersClasses,
+						'handlers-wrappers-classes': h.handlersWrappersClasses,
+						lines: h.lines,
+						'lines-component': h.linesComponent,
+						'lines-classes': h.linesClasses,
+						'lines-wrappers-classes': h.linesWrappersClasses,
+						resizable: h.resizable,
+						onResize: u.onResize,
+						onResizeEnd: u.onResizeEnd,
 					},
 					{
 						default: o(function () {
 							return [
 								s(
-									d,
-									{ movable: a.movable, onMove: l.onMove, onMoveEnd: l.onMoveEnd },
+									m,
+									{ movable: h.movable, onMove: u.onMove, onMoveEnd: u.onMoveEnd },
 									{
 										default: o(function () {
 											return [
 												s(
-													u,
+													d,
 													{
-														image: a.image,
-														coordinates: a.coordinates,
-														width: a.stencilCoordinates.width,
-														height: a.stencilCoordinates.height,
-														class: l.classes.preview,
-														transitions: a.transitions,
+														image: h.image,
+														coordinates: h.coordinates,
+														width: h.stencilCoordinates.width,
+														height: h.stencilCoordinates.height,
+														class: u.classes.preview,
+														transitions: h.transitions,
 													},
 													null,
 													8,
@@ -2585,53 +2586,54 @@ var he = A('vue-circle-stencil'),
 		},
 		emits: ['resize', 'resize-end', 'move', 'move-end'],
 	};
-ce.render = function (i, r, a, h, c, l) {
-	var u = n('stencil-preview'),
-		d = n('draggable-area'),
-		m = n('bounding-box');
+ce.render = function (r, a, h, c, l, u) {
+	var d = n('stencil-preview'),
+		m = n('draggable-area'),
+		p = n('bounding-box');
 	return (
 		t(),
 		e(
 			'div',
-			{ class: l.classes.stencil, style: l.style },
+			{ class: u.classes.stencil, style: u.style },
 			[
+				i(r.$slots, 'default'),
 				s(
-					m,
+					p,
 					{
-						width: a.stencilCoordinates.width,
-						height: a.stencilCoordinates.height,
-						transitions: a.transitions,
-						class: l.classes.boundingBox,
-						handlers: a.handlers,
-						'handlers-component': a.handlersComponent,
-						'handlers-classes': a.handlersClasses,
-						'handlers-wrappers-classes': a.handlersWrappersClasses,
-						lines: a.lines,
-						'lines-component': a.linesComponent,
-						'lines-classes': a.linesClasses,
-						'lines-wrappers-classes': a.linesWrappersClasses,
-						resizable: a.resizable,
-						onResize: l.onResize,
-						onResizeEnd: l.onResizeEnd,
+						width: h.stencilCoordinates.width,
+						height: h.stencilCoordinates.height,
+						transitions: h.transitions,
+						class: u.classes.boundingBox,
+						handlers: h.handlers,
+						'handlers-component': h.handlersComponent,
+						'handlers-classes': h.handlersClasses,
+						'handlers-wrappers-classes': h.handlersWrappersClasses,
+						lines: h.lines,
+						'lines-component': h.linesComponent,
+						'lines-classes': h.linesClasses,
+						'lines-wrappers-classes': h.linesWrappersClasses,
+						resizable: h.resizable,
+						onResize: u.onResize,
+						onResizeEnd: u.onResizeEnd,
 					},
 					{
 						default: o(function () {
 							return [
 								s(
-									d,
-									{ movable: a.movable, onMove: l.onMove, onMoveEnd: l.onMoveEnd },
+									m,
+									{ movable: h.movable, onMove: u.onMove, onMoveEnd: u.onMoveEnd },
 									{
 										default: o(function () {
 											return [
 												s(
-													u,
+													d,
 													{
-														image: a.image,
-														coordinates: a.coordinates,
-														width: a.stencilCoordinates.width,
-														height: a.stencilCoordinates.height,
-														class: l.classes.preview,
-														transitions: a.transitions,
+														image: h.image,
+														coordinates: h.coordinates,
+														width: h.stencilCoordinates.width,
+														height: h.stencilCoordinates.height,
+														class: u.classes.preview,
+														transitions: h.transitions,
 													},
 													null,
 													8,
@@ -4241,47 +4243,47 @@ var le = ['transitions'],
 	},
 	me = { key: 0, ref: 'canvas', style: { display: 'none' } },
 	pe = { key: 1, ref: 'sourceCanvas', style: { display: 'none' } };
-de.render = function (i, n, r, a, p, g) {
+de.render = function (n, r, a, p, g, f) {
 	return (
 		t(),
 		e(
 			'div',
-			{ ref: 'cropper', class: g.classes.cropper },
+			{ ref: 'cropper', class: f.classes.cropper },
 			[
-				s('div', { ref: 'stretcher', class: g.classes.stretcher }, null, 2),
+				s('div', { ref: 'stretcher', class: f.classes.stretcher }, null, 2),
 				s(
 					'div',
-					{ class: g.classes.boundaries, style: g.boundariesStyle },
+					{ class: f.classes.boundaries, style: f.boundariesStyle },
 					[
 						(t(),
 						e(
-							h(r.backgroundWrapperComponent),
+							h(a.backgroundWrapperComponent),
 							{
-								class: g.classes.cropperWrapper,
-								'wheel-resize': g.settings.resizeImage.wheel,
-								'touch-resize': g.settings.resizeImage.touch,
-								'touch-move': g.settings.moveImage.touch,
-								'mouse-move': g.settings.moveImage.mouse,
-								onMove: g.onManipulateImage,
-								onResize: g.onManipulateImage,
+								class: f.classes.cropperWrapper,
+								'wheel-resize': f.settings.resizeImage.wheel,
+								'touch-resize': f.settings.resizeImage.touch,
+								'touch-move': f.settings.moveImage.touch,
+								'mouse-move': f.settings.moveImage.mouse,
+								onMove: f.onManipulateImage,
+								onResize: f.onManipulateImage,
 							},
 							{
 								default: o(function () {
 									return [
-										s('div', { class: g.classes.background, style: g.boundariesStyle }, null, 6),
+										s('div', { class: f.classes.background, style: f.boundariesStyle }, null, 6),
 										s(
 											'div',
-											{ class: g.classes.imageWrapper },
+											{ class: f.classes.imageWrapper },
 											[
 												s(
 													'img',
 													{
 														ref: 'image',
-														crossorigin: p.imageAttributes.crossOrigin,
-														src: p.imageAttributes.src,
-														class: g.classes.image,
-														style: g.imageStyle,
-														onMousedown: n[1] || (n[1] = d(function () {}, ['prevent'])),
+														crossorigin: g.imageAttributes.crossOrigin,
+														src: g.imageAttributes.src,
+														class: f.classes.image,
+														style: f.imageStyle,
+														onMousedown: r[1] || (r[1] = d(function () {}, ['prevent'])),
 													},
 													null,
 													46,
@@ -4290,28 +4292,33 @@ de.render = function (i, n, r, a, p, g) {
 											],
 											2,
 										),
-										s('div', { class: g.classes.foreground, style: g.boundariesStyle }, null, 6),
+										s('div', { class: f.classes.foreground, style: f.boundariesStyle }, null, 6),
 										c(
 											(t(),
 											e(
-												h(r.stencilComponent),
+												h(a.stencilComponent),
 												u(
 													{
 														ref: 'stencil',
-														image: g.image,
-														coordinates: p.coordinates,
-														'stencil-coordinates': g.stencilCoordinates,
-														transitions: g.transitionsOptions,
+														image: f.image,
+														coordinates: g.coordinates,
+														'stencil-coordinates': f.stencilCoordinates,
+														transitions: f.transitionsOptions,
 													},
-													r.stencilProps,
+													a.stencilProps,
 													{
-														onResize: g.onResize,
-														onResizeEnd: g.onResizeEnd,
-														onMove: g.onMove,
-														onMoveEnd: g.onMoveEnd,
+														onResize: f.onResize,
+														onResizeEnd: f.onResizeEnd,
+														onMove: f.onMove,
+														onMoveEnd: f.onMoveEnd,
 													},
 												),
-												null,
+												{
+													default: o(function () {
+														return [i(n.$slots, 'stencil-content')];
+													}),
+													_: 3,
+												},
 												16,
 												[
 													'image',
@@ -4324,10 +4331,10 @@ de.render = function (i, n, r, a, p, g) {
 													'onMoveEnd',
 												],
 											)),
-											[[l, p.imageLoaded]],
+											[[l, g.imageLoaded]],
 										),
-										r.canvas ? (t(), e('canvas', me, null, 512)) : m('', !0),
-										r.canvas ? (t(), e('canvas', pe, null, 512)) : m('', !0),
+										a.canvas ? (t(), e('canvas', me, null, 512)) : m('', !0),
+										a.canvas ? (t(), e('canvas', pe, null, 512)) : m('', !0),
 									];
 								}),
 								_: 1,
